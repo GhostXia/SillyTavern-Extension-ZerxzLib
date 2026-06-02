@@ -98,7 +98,7 @@ class GeminiLayouts extends LitElement {
         const value = textarea.value
             .split(/[\n;]/)
             .map((v) => v.trim())
-            .filter((v) => v.length > 0 && v.startsWith("AIzaSy"));
+            .filter((v) => v.length > 0 && (v.startsWith("AIzaSy") || v.startsWith("AQ.")));
 
         this.apiKeys = value.join("\n");
         textarea.value = this.apiKeys;

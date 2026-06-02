@@ -47,7 +47,7 @@ export async function switchSecretsFromArray() {
     const api_keys = api_key
         .split(/[\n;]/)
         .map((v) => v.trim())
-        .filter((v) => v.startsWith("AIzaSy"));
+        .filter((v) => v.startsWith("AIzaSy") || v.startsWith("AQ."));
     if (api_keys.length <= 1) {
         return;
     }
